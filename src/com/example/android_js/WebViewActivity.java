@@ -48,6 +48,19 @@ public class WebViewActivity extends Activity {
 
 			}
 		}), "IAndroid");
+		
+		
+		webview.addJavascriptInterface(new Operator(new onJSClick() {
+			@Override
+			public void onClick(final String valueFromJS) {
+				Message msg = Message.obtain();
+				msg.what = 1;
+				msg.obj = (String) valueFromJS;
+				mHandler.sendMessage(msg);
+
+			}
+		}), "IAndroidTest");
+		
 
 	}
 

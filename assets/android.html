@@ -1,13 +1,15 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 <script type="text/javascript">
   function test(){
-	 // alert('问问');
 	  window.IAndroid.getJsReturn('你呀真是的~');
-	 //return '你呀真是的~';
+}
+  function test2(a){
+     // alert(a);
+	  window.IAndroidTest.getJsReturn(a);
 }
 
 </script>
@@ -15,6 +17,8 @@
 </head>
 
 <body>
-  <input type="button" id="id_btn" name="name_btn" value="测试" onclick="test()" />
+  <input type="button" id="id_btn" name="name_btn" value="测试IAndroid" onclick="test()" /> <br/> <br/> <br/>
+  
+  <input type="button" id="id_btn" name="name_btn" value="测试IAndroidTest" onclick="test2('这是第二个接口')" />
 </body>
 </html>
